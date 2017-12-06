@@ -20,7 +20,15 @@ public class Coin {
     private String USD;
     private String EUR;
     private String GBP;
+    private String TRY;
 
+    public String getTRY() {
+        return TRY;
+    }
+
+    public void setTRY(String TRY) {
+        this.TRY = TRY;
+    }
 
     public String getBTC() {
         return BTC;

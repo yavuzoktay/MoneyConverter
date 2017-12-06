@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView coinImage;
     TextView toTextView;
 
-    String[] money={"USD","EUR","GBP"};
+    String[] money={"USD","EUR","GBP","TRY"};
     String[] coin={"BTC","ETH","ETC","XRP","LTC","XMR","DASH","MAID","AUR","XEM"};
 
     @Override
@@ -138,6 +138,10 @@ public class MainActivity extends AppCompatActivity {
                     showData(response.body().getEUR());
                 else if (coinName.equals("GBP"))
                     showData(response.body().getGBP());
+                else if (coinName.equals("TRY"))
+                    showData(response.body().getTRY());
+
+
             }
 
             @Override
@@ -221,6 +225,10 @@ public class MainActivity extends AppCompatActivity {
         else if (toSpinner.getItems().get(toSpinner.getSelectedIndex()).toString().equals("EUR"))
         {
             toTextView.setText("€"+value);
+        }
+        else if (toSpinner.getItems().get(toSpinner.getSelectedIndex()).toString().equals("TRY"))
+        {
+            toTextView.setText("₺"+value);
         }
     }
 }

@@ -23,6 +23,7 @@ public class Common {
     public static final String AUR_IMAGE=new StringBuilder(BASE_URL).append("/media/19608/aur.png").toString();
     public static final String XEM_IMAGE=new StringBuilder(BASE_URL).append("/media/20490/xem.png").toString();
 
+
     public static CoinService getCoinService()
     {
         return RetrofitClient.getClient(API_URL).create(CoinService.class);
